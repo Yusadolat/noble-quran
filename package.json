@@ -1,0 +1,42 @@
+{
+  "name": "noble-quran",
+  "version": "0.0.1",
+  "description": "npm module for the noble Al-Quran (tanzil)",
+  "keywords": [
+    "islam",
+    "quran",
+    "allah",
+    "muslim",
+    "hausa",
+    "youruba",
+    "urdu"
+  ],
+  "main": "index.js",
+  "ava": {
+    "files": [
+      "tests/*.js"
+    ]
+  },
+  "dependencies": {
+    "sqlite3": "*"
+  },
+  "scripts": {
+    "test": "ava",
+    "lint": "node_modules/eslint/bin/eslint.js --ignore-path .gitignore .",
+    "prepublish": "sh scripts/install"
+  },
+  "repository": "git://github.com/yusadolat/noble-quran.git",
+  "author": "Yusuf Adeyemo <Yusadolat@gmail.com>",
+  "bugs": {
+    "url": "http://github.com/yusadolat/noble-quran/issues"
+  },
+  "license": "LGPL",
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "ava": "^0.16.0",
+    "q": "^1.4.1"
+  }
+}
