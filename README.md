@@ -96,34 +96,7 @@ quran.select({ chapter: 1}, { offset: 1, limit: 3, language: 'en'}, function(err
   }
 });
 ```
-Similarly for hindi
 
-```
-Code:
-quran.select({ chapter: 1}, { offset: 1, limit: 3, language: 'hi'}, function(err,verses) {
-  if (!err) {
-    console.log(verses);
-  }
-});
-Output
-[ 
-  { chapter: 1,
-    verse: 1,
-    ar: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
-    hi: 'अल्लाह के नाम से जो रहमान व रहीम है।',
-    translator: 'hindi' },
-  { chapter: 1,
-    verse: 2,
-    ar: 'ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ',
-    hi: 'तारीफ़ अल्लाह ही के लिये है जो तमाम क़ायनात का रब है।',
-    translator: 'hindi' },
-  { chapter: 1,
-    verse: 3,
-    ar: 'ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
-    hi: 'रहमान और रहीम है।',
-    translator: 'hindi' } 
-]
-```
 
 Want multiple translations at once? Use an array when specifying language
 
@@ -199,7 +172,7 @@ quran.search('en','islam',function(err,verses) {
 
 See Also
 ----
-The npm module stores quran db as a sqlite database and exposes it via an API. With webSQL, it is possible to do the same for a pure javascript application, without requiring a server side component. That's the idea behind [Quran browser](http://qzaidi.github.io/quran). There is also a javascript version which pulls data from a [google spreadsheet] (http://qzaidi.github.io/quran/javascript), and another one using [firebase](http://qzaidi.github.io/quran/javascript), which can be easily embedded on a website.
+The npm module stores quran db as a sqlite database and exposes it via an API. With webSQL, it is possible to do the same for a pure javascript application, without requiring a server side component. 
 
 Linting
 -------
