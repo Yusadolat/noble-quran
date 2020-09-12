@@ -1,4 +1,4 @@
-quran
+noble-quran
 ==========
 
 NodeJS Library of the Noble Quran
