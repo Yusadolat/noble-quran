@@ -1,7 +1,7 @@
 quran
 ==========
 
-node.js interface to Holy Quran. See the javascript and websql versions at http://qzaidi.github.io/quran.
+NodeJS Library of the Noble Quran
 
 Installation
 ------------
