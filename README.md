@@ -84,7 +84,7 @@ quran.select({ chapter: 1, verse: [ 2, 4, 6 ]}, function(err,verses) {
 
 ```
 
-Currently, only arabic text and english, hindi and urdu translations are supported, to limit package size.
+Currently, only arabic text and english, Hausa  translations are supported, to limit package size.
 You can however, easily add translations to this package. Open an issue if you want to.
 
 To fetch both the arabic text and translation, set the language option to en.
