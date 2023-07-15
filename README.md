@@ -32,6 +32,7 @@ quran.get(1,function(err,verses) {
   }
 });
 ```
+
 verses is an array, so you can join them in the above.
 
 .get is simply a wrapper on select, so you can directly invoke it
@@ -54,9 +55,10 @@ quran.select({ chapter: 1}, { offset: 1, limit: 3}, function(err,verses) {
   { chapter: 1, verse: 3, ar: 'ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' } 
 ]
 ```
+
 verses is an array of objects, and has additional info (chapter number, verse number).
 
-The second argument to select is optional. 
+The second argument to select is optional.
 
 If you want to fetch multiple verses, not necessarily in sequence, use an array to specify this.
 
@@ -97,7 +99,6 @@ quran.select({ chapter: 1}, { offset: 1, limit: 3, language: 'en'}, function(err
 });
 ```
 
-
 Want multiple translations at once? Use an array when specifying language
 
 ```
@@ -129,7 +130,7 @@ quran.select({ chapter: 1, verse: [ 2, 4, 6 ]},
 ] 
 ```
 
-You can also fetch meta data about a chapter 
+You can also fetch meta data about a chapter
 
 ```
 quran.chapter(1,function(err,info) {
@@ -138,6 +139,7 @@ quran.chapter(1,function(err,info) {
   }
 });
 ```
+
 Or all the chapters, by omitting the optional argument
 
 ```
@@ -172,13 +174,14 @@ quran.search('en','islam',function(err,verses) {
 
 See Also
 ----
-The npm module stores quran db as a sqlite database and exposes it via an API. With webSQL, it is possible to do the same for a pure javascript application, without requiring a server side component. 
+
+The npm module stores quran db as a sqlite database and exposes it via an API. With webSQL, it is possible to do the same for a pure javascript application, without requiring a server side component.
 
 Linting
 -------
 
-You can run eslint to check your code for best practices: http://eslint.org/. A local install of eslint as well as the
-the standard linting rule set is included as part of dev dependencies for this package and you can use the following 
+You can run eslint to check your code for best practices: <http://eslint.org/>. A local install of eslint as well as the
+the standard linting rule set is included as part of dev dependencies for this package and you can use the following
 convenient command to run the linter on all JavaScript files in this package:
 
 ```bash
@@ -188,7 +191,7 @@ npm run lint
 Run Unit Tests
 --------------
 
-Some basic tests are included, which are written using ava: https://github.com/avajs. Here's how you install ava:
+Some basic tests are included, which are written using ava: <https://github.com/avajs>. Here's how you install ava:
 
 ```bash
 npm install -g ava
@@ -203,17 +206,17 @@ npm test
 Credits
 -------
 
-This work is based on Quran Text and Translations made available by http://tanzil.net. 
+This work is based on Quran Text and Translations made available by <http://tanzil.net>.
 
 Sites using this package
 ------------------------
 
-http://duas.mobi/quran.
+<http://duas.mobi/quran>.
 
 To add yours, submit a pull request.
 
 Known Issues
 ------------
 
-quran.select has some unsafe joins to fetch translations and can be abused. User should sanitise what is passed in as language options, or they 
+quran.select has some unsafe joins to fetch translations and can be abused. User should sanitise what is passed in as language options, or they
 could use quran.safe to wrap the calls (see test/select.js#FetchUnsupportedLanguage)
